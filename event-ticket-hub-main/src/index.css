@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MB Ticket Design System - Modern & Bold */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
+
+    --primary: 16 90% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 95%;
+    --secondary-foreground: 220 25% 20%;
+
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 160 84% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 16 90% 55%;
+
+    --radius: 1rem;
+
+    /* MB Ticket Custom Colors */
+    --mb-coral: 16 90% 55%;
+    --mb-coral-light: 16 90% 95%;
+    --mb-navy: 240 30% 12%;
+    --mb-navy-light: 240 20% 20%;
+    --mb-teal: 160 84% 45%;
+    --mb-gold: 45 90% 55%;
+    
+    /* Gradients - Light mode */
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 96%) 0%, hsl(240 10% 92%) 100%);
+    --gradient-coral: linear-gradient(135deg, hsl(16 90% 55%) 0%, hsl(35 90% 55%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(240 10% 98%) 100%);
+    
+    /* Section backgrounds - Light mode */
+    --section-dark: 240 10% 96%;
+    --section-dark-foreground: 240 10% 10%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 16 90% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 16 90% 95%;
+    --sidebar-accent-foreground: 240 20% 15%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 16 90% 55%;
+  }
+
+  .dark {
+    --background: 240 25% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 20% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 20% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 16 90% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 15% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 15% 18%;
+    --muted-foreground: 240 5% 60%;
+
+    --accent: 160 84% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 16 90% 58%;
+
+    --mb-coral: 16 90% 58%;
+    --mb-coral-light: 16 40% 20%;
+    --mb-navy: 240 25% 8%;
+    --mb-navy-light: 240 20% 15%;
+    --mb-teal: 160 84% 50%;
+    
+    /* Section backgrounds - Dark mode */
+    --section-dark: 240 25% 8%;
+    --section-dark-foreground: 0 0% 98%;
+    --mb-gold: 45 90% 60%;
+
+    --sidebar-background: 240 25% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 16 90% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 15% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 15% 18%;
+    --sidebar-ring: 16 90% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.7);
+}
